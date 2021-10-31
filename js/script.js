@@ -1,22 +1,39 @@
-const str = 'teSt';
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function() {
+        console.log("test");
+    }
+};
 
-console.log (str.toLocaleLowerCase());
-console.log(str);
+options.makeTest();
 
-let fruit = "some fruit";
+const {border, bg} = options.colors;
+console.log(bg);
 
-console.log(fruit.indexOf("q"));
+// console.log(Object.keys(options).length);
 
-const logg = "Hello world";
+// console.log(options.name);
 
-console.log(logg.slice(6, 11));
-console.log(logg.substring(6, 11));
-console.log(logg.substr(6, 5));
+// delete options.name;
 
-const num = 12.5;
-console.log(Math.round(num));
+// // console.log(options);
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof(options[key]) == 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${i} имеэт значениу ${options[key][i]}`);
+            
+//         }
+//     } else {console.log(`Свойство ${key} имеэт значениу ${options[key]}`);
+//     counter++;
 
-const test = "12.2px";
-
-console.log(parseInt(test));
-console.log(parseFloat(test));
+//     }
+    
+// }
+// console.log(counter);
